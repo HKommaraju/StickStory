@@ -1,11 +1,11 @@
-let animationsData = {}; // Global variable to store JSON data
+let animationsData = {}; 
 let collectedRequirementsCounter = 0;
 let collectedRequirements = [];
 let requirements;
-let inPlay = true; // Variable to control the game state
-let game; // Declare game globally
+let inPlay = true; 
+let game; 
 
-// Preload JSON before starting the game
+
 async function fetchAnimationsData() {
     try {
         const response = await fetch('animations.json');
@@ -19,7 +19,7 @@ class MyGame extends Phaser.Scene {
     constructor() {
         super({ key: 'MyGame' });
         this.activeAnimations = [];
-        this.sounds = {}; // Store sound objects
+        this.sounds = {}; 
     }
 
     preload() {
@@ -31,7 +31,7 @@ class MyGame extends Phaser.Scene {
         const accessoryMappings = animationsData.mappings;
         requirements = animationsData.requirements;
 
-        // Load sprite sheets
+        
         for (const key in accessoryMappings) {
             const data = accessoryMappings[key];
             this.load.spritesheet(data.spritesheet_name, data.spritesheet_source, {
@@ -40,7 +40,7 @@ class MyGame extends Phaser.Scene {
             });
         }
 
-        // Load sounds
+        
         const soundMappings = animationsData.sounds;
         for (const key in soundMappings) {
             const soundData = soundMappings[key];
@@ -61,21 +61,21 @@ class MyGame extends Phaser.Scene {
 
         milo.play('idle');
 
-        // Store sound objects in the sounds dictionary
+        
         const soundMappings = animationsData.sounds;
         for (const key in soundMappings) {
             const soundData = soundMappings[key];
             this.sounds[soundData.soundname] = this.sound.add(soundData.soundname);
         }
 
-        // Listen for key press events
+        
         this.input.keyboard.on('keydown', (event) => {
             const key = event.key.toUpperCase();
             if (inPlay) {
                 if (animationsData.mappings[key]) {
                     this.playAccessoryAnimation(key);
                 } else if (animationsData.sounds[key]) {
-                    this.playSound(key);  // Play sound if it's defined in the JSON
+                    this.playSound(key);  
                 } else if (key === 'ENTER') {
                     this.checkGameStatus();
                 }
@@ -89,16 +89,17 @@ class MyGame extends Phaser.Scene {
         const accessoryData = animationsData.mappings[key];
 
         if (!accessoryData || collectedRequirements.includes(accessoryData.animation_name)) return;
-        collectedRequirements.push(accessoryData.animation_name);
+        
 
         if (requirements.includes(accessoryData.animation_name)) {
             collectedRequirementsCounter++;
+            collectedRequirements.push(accessoryData.animation_name);
         }
 
-        // Add the accessory sprite
+        
         const accessory = this.add.sprite(window.innerWidth / 2, 300, accessoryData.spritesheet_name).setDepth(accessoryData.depth || 0).setVisible(false);
 
-        // Create the animation dynamically
+        
         if (!this.anims.exists(accessoryData.animation_name)) {
             this.anims.create({
                 key: accessoryData.animation_name,
@@ -107,20 +108,20 @@ class MyGame extends Phaser.Scene {
                     end: accessoryData.frames
                 }),
                 frameRate: accessoryData.framerate,
-                repeat: -1,  // Animation should repeat indefinitely
+                repeat: -1,  
             });
         }
 
-        // Show and play the animation
+        
         accessory.setVisible(true);
         accessory.play(accessoryData.animation_name);
 
         this.activeAnimations.push(accessory);
 
-        // Use a conditional delayed call based on 'inPlay'
+        
         if (inPlay) {
             this.time.delayedCall(accessoryData.duration, () => {
-                if (inPlay) {  // Only stop the animation if the game is still in play
+                if (inPlay) {  
                     accessory.setVisible(false);
                     accessory.stop();
                 }
@@ -149,21 +150,20 @@ class MyGame extends Phaser.Scene {
     checkGameStatus() {
         
         if (collectedRequirementsCounter === requirements.length) {
-            console.log("Milo is ready for school! You win!");
+            
             document.querySelector('.won').style.display = 'block';
             document.querySelector('.tryagain').style.display = 'none';
-            inPlay = false; // Set inPlay to false when the game ends
-            this.keepRequiredAnimationsPlaying(); // Ensure required animations continue
+            inPlay = false; 
+            this.keepRequiredAnimationsPlaying(); 
         } else {
-            console.log("Milo is not ready yet. Keep trying!");
-            console.log(`Currently active items: ${collectedRequirements.join(", ")}`);
+            
             document.querySelector('.won').style.display = 'none';
             document.querySelector('.tryagain').style.display = 'block';
         }
     }
 
     keepRequiredAnimationsPlaying() {
-        // Iterate over required items and ensure their animations keep playing
+        
         requirements.forEach((requirement) => {
             const animationName = animationsData.mappings[requirement]?.animation_name;
             if (animationName) {
@@ -171,30 +171,30 @@ class MyGame extends Phaser.Scene {
                     (sprite) => sprite.anims.currentAnim.key === animationName
                 );
                 if (activeSprite) {
-                    activeSprite.stop(); // Ensure we restart the animation
-                    activeSprite.play(animationName); // Play animation indefinitely
+                    activeSprite.stop(); 
+                    activeSprite.play(animationName); 
                 }
             }
         });
     }
 
     onResize() {
-        // Update positions of all sprites when the window is resized
+        
         if (this.milo) {
             this.milo.setPosition(window.innerWidth / 2, 300);
         }
 
-        // Reposition any active accessory sprites
+        
         this.activeAnimations.forEach((sprite) => {
             sprite.setPosition(window.innerWidth / 2, 300);
         });
 
-        // Adjust game dimensions if necessary
+        
         this.scale.resize(window.innerWidth, 600);
     }
 
     update() {
-        // You can implement any updates here if needed
+        
     }
 }
 
@@ -208,27 +208,27 @@ fetchAnimationsData().then(() => {
         scene: MyGame,
     };
 
-    game = new Phaser.Game(config);  // Assigning the game object globally
+    game = new Phaser.Game(config);  
 });
 
-// Restart button logic
+
 document.addEventListener("DOMContentLoaded", () => {
-    const hintIcon = document.getElementById("hint-icon");
+    const hintIcon = document.getElementById("hint-icon"); //The actual hints button
     const hintMessage = document.getElementById("hints");
     const restartButton = document.getElementById("restart");
 
     hintIcon.addEventListener("click", () => {
         if (hintMessage.style.display === "none" || hintMessage.style.display === "") {
-            hintMessage.style.display = "block"; // Show the hint
+            hintMessage.style.display = "block"; 
         } else {
-            hintMessage.style.display = "none"; // Hide the hint
+            hintMessage.style.display = "none"; 
         }
     });
 
     restartButton.addEventListener('click', () => {
 
         console.log("start");
-        inPlay = true; // Set inPlay back to true to restart the game
+        inPlay = true; 
         collectedRequirements = []; 
         collectedRequirementsCounter = 0;
         document.querySelector('.won').style.display = 'none';
