@@ -3,7 +3,7 @@
 
         "A": {
         "animation_name": "shoes",
-        "spritesheet_source": "assets/images/shoes.png",
+        "spritesheet_source": "assets/images/shoes.PNG",
         "spritesheet_name": "milo_shoes",
         "frames": 3,
         "framerate": 4,
@@ -15,7 +15,7 @@
 
     "K": {
       "animation_name": "backpack",
-      "spritesheet_source": "assets/images/backpack.png",  
+      "spritesheet_source": "assets/images/backpack.PNG",  
       "spritesheet_name": "milo_backpack",  
       "frames": 3,  
       "framerate": 4,  
@@ -41,7 +41,7 @@
 
     "J": {
         "animation_name": "lights",
-        "spritesheet_source": "assets/images/lights.png",
+        "spritesheet_source": "assets/images/lights.PNG",
         "spritesheet_name": "milo_lights",
         "frames": 3,
         "framerate": 4,
@@ -65,7 +65,7 @@
 
     "R": {
         "animation_name": "disco",
-        "spritesheet_source": "assets/images/disco.png",
+        "spritesheet_source": "assets/images/disco.PNG",
         "spritesheet_name": "milo_disco",
         "frames": 3,
         "framerate": 4,
@@ -77,7 +77,7 @@
 
     "I": {
         "animation_name": "id",
-        "spritesheet_source": "assets/images/id.png",
+        "spritesheet_source": "assets/images/id.PNG",
         "spritesheet_name": "milo_id",
         "frames": 3,
         "framerate": 4,
@@ -89,7 +89,7 @@
 
     "E": {
         "animation_name": "ghost",
-        "spritesheet_source": "assets/images/ghost.png",
+        "spritesheet_source": "assets/images/ghost.PNG",
         "spritesheet_name": "milo_ghost",
         "frames": 3,
         "framerate": 4,
@@ -101,7 +101,7 @@
 
     "D": {
         "animation_name": "headphones",
-        "spritesheet_source": "assets/images/headphones.png",
+        "spritesheet_source": "assets/images/headphones.PNG",
         "spritesheet_name": "milo_headphones",
         "frames": 3,
         "framerate": 4,
@@ -113,7 +113,7 @@
 
     "B": {
         "animation_name": "bow",
-        "spritesheet_source": "assets/images/bow.png",
+        "spritesheet_source": "assets/images/bow.PNG",
         "spritesheet_name": "milo_bow",
         "frames": 3,
         "framerate": 4,
@@ -125,7 +125,7 @@
 
     "Q": {
         "animation_name": "hat",
-        "spritesheet_source": "assets/images/hat.png",
+        "spritesheet_source": "assets/images/hat.PNG",
         "spritesheet_name": "milo_hat",
         "frames": 3,
         "framerate": 4,
@@ -137,7 +137,7 @@
 
     "V": {
         "animation_name": "transmission",
-        "spritesheet_source": "assets/images/transmission.png",
+        "spritesheet_source": "assets/images/transmission.PNG",
         "spritesheet_name": "milo_transmission",
         "frames": 3,
         "framerate": 4,
