@@ -1,0 +1,216 @@
+{
+    "mappings": {
+
+        "A": {
+        "animation_name": "shoes",
+        "spritesheet_source": "assets/images/shoes.png",
+        "spritesheet_name": "milo_shoes",
+        "frames": 3,
+        "framerate": 4,
+        "duration": 5000,
+        "framewidth": 137,
+        "frameheight": 350,
+        "depth": 1
+    },
+
+    "K": {
+      "animation_name": "backpack",
+      "spritesheet_source": "assets/images/backpack.png",  
+      "spritesheet_name": "milo_backpack",  
+      "frames": 3,  
+      "framerate": 4,  
+      "duration": 5000,  
+      "framewidth": 137,  
+      "frameheight": 350,
+      "depth":4
+    },
+
+    "G": {
+        "animation_name": "glasses",
+        "spritesheet_source": "assets/images/glasses.png",
+        "spritesheet_name": "milo_glasses",
+        "frames": 3,
+        "framerate": 4,
+        "duration": 5000,
+        "framewidth": 137,
+        "frameheight": 350,
+        "depth": 8
+    }
+
+    ,
+
+    "J": {
+        "animation_name": "lights",
+        "spritesheet_source": "assets/images/lights.png",
+        "spritesheet_name": "milo_lights",
+        "frames": 3,
+        "framerate": 4,
+        "duration": 5000,
+        "framewidth": 137,
+        "frameheight": 350,
+        "depth": 2
+    } ,
+
+    "O": {
+        "animation_name": "scarf",
+        "spritesheet_source": "assets/images/scarf.png",
+        "spritesheet_name": "milo_scarf",
+        "frames": 3,
+        "framerate": 4,
+        "duration": 5000,
+        "framewidth": 137,
+        "frameheight": 350,
+        "depth": 3
+    } ,
+
+    "R": {
+        "animation_name": "disco",
+        "spritesheet_source": "assets/images/disco.png",
+        "spritesheet_name": "milo_disco",
+        "frames": 3,
+        "framerate": 4,
+        "duration": 5000,
+        "framewidth": 137,
+        "frameheight": 350,
+        "depth": 5
+    } ,
+
+    "I": {
+        "animation_name": "id",
+        "spritesheet_source": "assets/images/id.png",
+        "spritesheet_name": "milo_id",
+        "frames": 3,
+        "framerate": 4,
+        "duration": 5000,
+        "framewidth": 137,
+        "frameheight": 350,
+        "depth": 6
+    } ,
+
+    "E": {
+        "animation_name": "ghost",
+        "spritesheet_source": "assets/images/ghost.png",
+        "spritesheet_name": "milo_ghost",
+        "frames": 3,
+        "framerate": 4,
+        "duration": 2000,
+        "framewidth": 137,
+        "frameheight": 350,
+        "depth": 7
+    } ,
+
+    "D": {
+        "animation_name": "headphones",
+        "spritesheet_source": "assets/images/headphones.png",
+        "spritesheet_name": "milo_headphones",
+        "frames": 3,
+        "framerate": 4,
+        "duration": 5000,
+        "framewidth": 137,
+        "frameheight": 350,
+        "depth": 9
+    } ,
+
+    "B": {
+        "animation_name": "bow",
+        "spritesheet_source": "assets/images/bow.png",
+        "spritesheet_name": "milo_bow",
+        "frames": 3,
+        "framerate": 4,
+        "duration": 5000,
+        "framewidth": 137,
+        "frameheight": 350,
+        "depth": 11
+    } ,
+
+    "Q": {
+        "animation_name": "hat",
+        "spritesheet_source": "assets/images/hat.png",
+        "spritesheet_name": "milo_hat",
+        "frames": 3,
+        "framerate": 4,
+        "duration": 5000,
+        "framewidth": 137,
+        "frameheight": 350,
+        "depth": 10
+    } ,
+
+    "V": {
+        "animation_name": "transmission",
+        "spritesheet_source": "assets/images/transmission.png",
+        "spritesheet_name": "milo_transmission",
+        "frames": 3,
+        "framerate": 4,
+        "duration": 5000,
+        "framewidth": 137,
+        "frameheight": 350,
+        "depth": 12
+    }
+    },
+
+    "sounds" : {
+
+       
+        "T": {
+            "soundname" : "bubbles",
+            "soundsource": "assets/sounds/bubbles.wav"
+            
+        } ,
+        "H": {
+            "soundname" : "baduboop",
+            "soundsource": "assets/sounds/baduboop.wav"
+            
+        } ,
+        "M": {
+            "soundname" : "bleep",
+            "soundsource": "assets/sounds/bleep.wav"
+        } ,
+        "C": {
+            "soundname" : "blink",
+            "soundsource": "assets/sounds/blink.wav"
+        } ,
+        "Y": {
+            "soundname" : "zip",
+            "soundsource": "assets/sounds/zip.wav"
+        } ,
+        "Z": {
+            "soundname" : "eat",
+            "soundsource": "assets/sounds/eat.wav"
+        } ,
+        "F": {
+            "soundname" : "deep",
+            "soundsource": "assets/sounds/deep.wav"
+        } ,
+        "N": {
+            "soundname" : "load",
+            "soundsource": "assets/sounds/load.wav"
+        } ,
+        "P": {
+            "soundname" : "ouch",
+            "soundsource": "assets/sounds/ouch.wav"
+        } ,
+        "S": {
+            "soundname" : "shot",
+            "soundsource": "assets/sounds/shot.mp3"
+        } ,
+        "L": {
+            "soundname" : "spiral",
+            "soundsource": "assets/sounds/spiral.wav"
+        } ,
+        "U": {
+            "soundname" : "vs",
+            "soundsource": "assets/sounds/vs.wav"
+        } ,
+        "W": {
+            "soundname" : "water",
+            "soundsource": "assets/sounds/water.wav"
+        } ,
+        "X": {
+            "soundname" : "wobble",
+            "soundsource": "assets/sounds/wobble.mp3"
+        }
+    },
+    "requirements": 
+        ["shoes","backpack","id"]
+    
+}
